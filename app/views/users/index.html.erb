@@ -1,0 +1,8 @@
+<% provide(:title, "All Users") %>
+<h1> User List </h1>
+<ul class="users">
+<% @users.each do |user| %>
+  <%= render user %><!-- defined on /app/views/users/_user.html.erb -->
+<% end %><!-- the block could be replaced by 'render @users', as Rails would identify the User object and search for a correspondent view. -->
+</ul>
+<%= will_paginate %><!-- available on Gemfile -->
