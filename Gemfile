@@ -13,7 +13,6 @@ gem 'uglifier', '>= 2.5.3'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'faker', '1.4.2'
 
 gem 'will_paginate',           '3.0.7' #pagination
 gem 'bootstrap-will_paginate', '0.0.10'#basic pagination styling
@@ -51,6 +50,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring',      '1.1.3'
+  # generates crappy strings.
+  gem 'faker', '1.4.2'
 end
 
 group :test do
