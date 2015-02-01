@@ -2,57 +2,58 @@
 <%= render 'static_pages/static_header' %>
 <link type="text/css" rel="stylesheet" href="home.css"/>
 
-<div class="slider">
+<div class="container">
+  <div class="row-same-height">
+    <div class="col-md-8 col-sm-height"><!--bigger than 'col-md-4' below. -->
+      <div class="slider">
 
-  <div class="slide active-slide">
-    <div class="container">
-      <img src="http://i62.tinypic.com/2j9opx.jpg" border="0" alt="Image and video hosting by TinyPic">
-    </div>
-  </div>
+        <div class="slide active-slide">
+          <div class="thumbnail">
+            <img src="http://i62.tinypic.com/2j9opx.jpg" border="0" alt="Image and video hosting by TinyPic">
+          </div>
+        </div>
 
-  <div class="slide">
-    <div class="container">
-      <img src="http://i61.tinypic.com/11i02o2.jpg" border="0" alt="Image and video hosting by TinyPic">
-    </div>
-  </div>
+        <div class="slide">
+          <div class="thumbnail">
+            <img src="http://i61.tinypic.com/11i02o2.jpg" border="0" alt="Image and video hosting by TinyPic">
+          </div>
+        </div>
 
-  <div class="slide">
-    <div class="container">
-      <img src="http://i59.tinypic.com/nvqmo1.jpg" border="0" alt="Image and video hosting by TinyPic">
-    </div>
-  </div>
+        <div class="slide">
+          <div class="thumbnail">
+            <img src="http://i59.tinypic.com/nvqmo1.jpg" border="0" alt="Image and video hosting by TinyPic">
+          </div>
+        </div>
 
-  <div class="slide">
-    <div class="container">
-      <img src="http://i58.tinypic.com/2nul9f.jpg" border="0" alt="Image and video hosting by TinyPic">
-    </div>
-  </div>
+        <div class="slide">
+          <div class="thumbnail">
+            <img src="http://i58.tinypic.com/2nul9f.jpg" border="0" alt="Image and video hosting by TinyPic">
+          </div>
+        </div>
 
-  <div class="slide">
-    <div class="container">
-      <img src="http://i62.tinypic.com/2l9gmqr.jpg" border="0" alt="Image and video hosting by TinyPic">
-    </div>
-  </div>
+        <div class="slide">
+          <div class="thumbnail">
+            <img src="http://i62.tinypic.com/2l9gmqr.jpg" border="0" alt="Image and video hosting by TinyPic">
+          </div>
+        </div>
 
-</div><!--slider-->
-<div class="slider-nav">
-  <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-  <ul class="slider-dots">
-    <li class="dot active-dot">&bull;</li>
-    <li class="dot">&bull;</li>
-    <li class="dot">&bull;</li>
-    <li class="dot">&bull;</li>
-    <li class="dot">&bull;</li>
-  </ul>
-  <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-</div><!--slider-nav-->
-
+      </div><!--slider-->
+      <div class="slider-nav">
+        <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+        <ul class="slider-dots">
+          <li class="dot active-dot">&bull;</li>
+          <li class="dot">&bull;</li>
+          <li class="dot">&bull;</li>
+          <li class="dot">&bull;</li>
+          <li class="dot">&bull;</li>
+        </ul>
+        <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+      </div><!--slider-nav-->
+    </div><!--col-md-6-->
+    <div class="col-md-4 col-sm-height">
+      <%= render 'sessions/new' %>
+    </div><!--col-md-4-->
+  </div><!--row-->
+</div><!--container-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/app/assets/javascripts/home.js"></script>
-<div>
-  <aside><!-- class="col-md-4">-->
-    <section>
-      <%= render 'sessions/new' %>
-    </section>
-  </aside>
-</div>
