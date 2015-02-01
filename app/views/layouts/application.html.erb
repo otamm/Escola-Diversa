@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= render 'layouts/header' %> <!-- the header to be displayed through all pages: '_header.html.erb' -->
+  <!--<% if current_user.nil? %>
+  <%= render "static_pages/static_header" %> <!-- the header to be displayed through all pages: '_header.html.erb'
+  <% end %>-->
 </head>
 <body>
   <div id="body">
     <%= yield %> <!-- 'yield' here displays on the layout body the contents of the view assigned for the specific page being accessed.
-  </div><!--body -->
-  <div id="footer">
-    <%= render 'layouts/footer' %> <!-- footer to be displayed through all pages: '_footer.html.erb' ; also note that the footer and header are on different divs so it will be easier to display them with a certain margin.
-  </div><!-- footer -->
+    </div><!--body -->
+    <div id="footer">
+      <%= render 'layouts/footer' %> <!-- footer to be displayed through all pages: '_footer.html.erb' ; also note that the footer and header are on different divs so it will be easier to display them with a certain margin.
+      </div><!-- footer -->
 </body>
 </html>

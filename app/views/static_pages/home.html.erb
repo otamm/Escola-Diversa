@@ -1,21 +1,32 @@
 <% provide(:title,"Home") %>
-<% if logged_in? %>
-<div><!-- class="row">-->
+<%= render 'static_pages/static_header' %>
+
+<div class="slider">
+
+  <div class="slide active-slide">
+    <div class="container">
+      <img src="http://i61.tinypic.com/11i02o2.jpg" border="0" alt="Image and video hosting by TinyPic">
+    </div>
+  </div>
+
+</div><!--slider-->
+<div class="slider-nav">
+  <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+  <ul class="slider-dots">
+    <li class="dot active-dot">&bull;</li>
+    <li class="dot">&bull;</li>
+    <li class="dot">&bull;</li>
+    <li class="dot">&bull;</li>
+  </ul>
+  <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+</div><!--slider-nav-->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/app/assets/javascripts/home.js"></script>
+<div>
   <aside><!-- class="col-md-4">-->
-    <section><!-- class="user_info">-->
-      <%= render 'shared/user_info' %>
-    </section>
-    <section><!-- class="micropost_form">-->
-      <%= render 'shared/micropost_form' %>
+    <section>
+      <%= render 'sessions/new' %>
     </section>
   </aside>
-  <div><!--microposts-->
-    <ul>
-      <%= render 'shared/feed' %>
-    </ul>
-  </div>
 </div>
-<% else %>
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
-<% end %>
