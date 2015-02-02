@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ScheduleControllerTest < ActionController::TestCase
+class GradeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

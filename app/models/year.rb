@@ -1,3 +1,3 @@
 class Year < ActiveRecord::Base
-  has_many :users, :subjects, :schedules
+  has_many :users, :subjects
 end
