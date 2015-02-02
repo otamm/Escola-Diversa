@@ -1,4 +1,4 @@
-class SubjectsController < ApplicationController
+class StaffController < UsersController
 
   def new
 
@@ -19,5 +19,5 @@ class SubjectsController < ApplicationController
   def destroy
 
   end
-  
+
 end
