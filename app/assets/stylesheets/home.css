@@ -77,22 +77,22 @@
 }
 
 .active-slide {
-  /* display: block; */
+   display: block; 
 }
 
-/* slide image
+/* slide image */
 
 .thumbnail{
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   overflow: auto;
 }
 
 .thumbnail img {
-  height: 300px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
-*/
 
 .slide-copy h1 {
   color: #363636;

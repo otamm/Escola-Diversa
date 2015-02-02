@@ -19,7 +19,7 @@ gem 'bootstrap-will_paginate', '0.0.10'#basic pagination styling
 
 gem 'carrierwave',             '0.10.0' # image uploading
 gem 'mini_magick',             '3.8.0' # image resizing
-gem 'fog',                     '1.23.0' # image upload in production
+#gem 'fog',                     '1.23.0' # image upload in production
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '>= 4.0.0'
