@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  belongs_to :year # a student will attend a specific year.
+  #has_many :subjects # and study the subjects of that year. : unnecessary, year already owns subjects.
   attr_accessible :name, :email, :password, :password_confirmation, :activated, :activated_at
   attr_accessor :remember_token,  :activation_token, :reset_token
   before_save :downcase_email #runs the method before a .save method when this is called.
@@ -71,7 +73,7 @@ class User < ActiveRecord::Base
   end
 
   def feed
-    Micropost.where("user_id = ?", id) # Used to display a feed on the home page. 
+    Micropost.where("user_id = ?", id) # Used to display a feed on the home page.
   end
 
   private

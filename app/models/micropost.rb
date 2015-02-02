@@ -1,5 +1,6 @@
 class Micropost < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :staff # only principal/staff can post.
+  belongs_to :year # post will be available for a specific year.
   attr_accessible :content
   default_scope -> { order(created_at: :desc) } # the 'default_scope' is a Rails standard to define how something will be manipulated. Now we made the order of the posts to be from most to least recent; the raw, old fashioned Rails + SQL statement  for the argument would be order('created_at DESC')
   # more on 'default_scope': the '->' calls a 'lambda' (an anonymous, nameless function) which returns a proc (a procedure.). To execute the proc, the '.call' method is used. See example at the bottom of the page.

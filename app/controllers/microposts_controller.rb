@@ -3,7 +3,7 @@ class MicropostsController < ApplicationController
   before_action :correct_user, only: [:destroy]
 
   def create
-    @micropost = current_user.microposts.build(micropost_params)
+    @micropost = current_user.microposts.build(micropost_params) if current_user.staff? # microposting only available for school employees.
     if @micropost.save
       flash[:success] = "Micropost created!"
       redirect_to root_url
@@ -22,7 +22,7 @@ class MicropostsController < ApplicationController
   private
 
   def micropost_params
-    params.require(:micropost).permit(:content, :picture) # only allows posting of a micropost's :content & :picture
+    params.require(:micropost).permit(:content) #, :picture # only allows posting of a micropost's :content & :picture
   end
 
   def correct_user
