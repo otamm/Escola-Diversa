@@ -1,2 +1,2 @@
-class Principal < ActiveRecord::Base
+class Principal < User
 end
