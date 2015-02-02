@@ -23,7 +23,7 @@ class UsersController < ApplicationController
                                     #the form is not secure just by (params[:user]), as any user can use CSRF attacks and, say, pass "admin=true" with curl and sign itself as an admin.
                                     #better to use the 'strong_params' convention of Rails 4 and permit only a pre-defined set of params to be passed by the user (see user_params below).
     if @user.save #default action for saved user.
-      role = {1: "Aluno", 2: "Professor"} #role for created user.
+      role = {1 => "Aluno", 2 => "Professor"} #role for created user.
       # commented out since the account now needs to be activated. log_in(@user)
       #@user.send_activation_email # defined on /models/user.rb
       flash[:notice] = "#{role[@user.role]} registrado com sucesso!" #popup triggered when new account is created.
