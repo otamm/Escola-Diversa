@@ -1,4 +1,8 @@
-Sample App for the Rails tutorial.
+Based on the the 'tutorialApp' repository.
+
+A school web app. It has a header rendered on static pages, another rendered for users and yet another for staff, each with its specific functions.
+The Principal is allowed to create teachers & students, teachers edit grades and post memos specific for each class and school year. Students only have access to posted info.
+All users have an e-mail field; it allows for the Principal and the Teachers to recover their password and in the case of students, it is the e-mail of a next of kin, there mostly for school's staff use.
 
 Deployment to Heroku:
 
