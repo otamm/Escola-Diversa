@@ -1,5 +1,5 @@
 class AddIndexToUsersEmail < ActiveRecord::Migration
   def change
-    add_index :users, :email ,unique: true #adds unique index to the attribute 'email' for the model 'user'
+    add_index :users, :username ,unique: true #adds unique index to the attribute 'username' of the model 'user'
   end
 end

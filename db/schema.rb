@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150127034743) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "email"
+    t.string   "username"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "password_digest"
@@ -33,6 +33,6 @@ ActiveRecord::Schema.define(version: 20150127034743) do
     t.integer  "role",            default: 0
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end
