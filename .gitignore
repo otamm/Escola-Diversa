@@ -20,3 +20,4 @@
 /config/secrets.yml
 
 /app/uploaders/*
+/config/initializers/carrier_wave.rb
