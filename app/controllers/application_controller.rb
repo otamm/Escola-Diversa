@@ -14,4 +14,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def principal?
+    unless current_user.role > 2
+      redirect_to login_url # create to block actions by an user who wasn't supposed to do these actions, don't need friendly forwarding.
+    end
+  end
+
+  def staff?
+    unless current_user.role > 1
+      redirect_to login_url # same as above.
+    end
+  end
+  
 end

@@ -1,5 +1,6 @@
 class YearController < ApplicationController
-
+  before_action :principal? #only the principal determines each grade's annual curriculum.
+  
   def new
 
   end
@@ -19,5 +20,5 @@ class YearController < ApplicationController
   def destroy
 
   end
-  
+
 end
