@@ -1,5 +1,7 @@
 function main() {
+
   $('.arrow-next').click(function(){
+    event.preventDefault();
     var currentSlide = $('.active-slide');
     var nextSlide = $('.active-slide').next();
     var currentDot = $('.active-dot');
@@ -17,6 +19,7 @@ function main() {
   });
 
   $('.arrow-prev').click(function(){
+    event.preventDefault();
     var currentSlide = $('.active-slide');
     var prevSlide = $('.active-slide').prev();
     var currentDot = $('.active-dot');
