@@ -6,4 +6,14 @@ module UsersHelper
     return image_tag(gravatar_url, alt: user.name, class: "gravatar", size: size) #creates an image tag in HTML which alt="user.name" and a class="gravatar"
   end
 
+  def staff?
+    return true if self.role == 2 || self.role == 3 # 2 == teacher, 3 == principal.
+    return false
+  end
+
+  def principal?
+    return true if self.role == 3
+    return false
+  end
+
 end
