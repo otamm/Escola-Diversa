@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127034743) do
+ActiveRecord::Schema.define(version: 20150202075539) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150127034743) do
     t.string   "password_digest"
     t.string   "remember_digest"
     t.integer  "role",            default: 0
+    t.string   "email"
   end
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true

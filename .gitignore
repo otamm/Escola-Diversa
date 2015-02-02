@@ -18,3 +18,5 @@
 
 #Ignore secret keys file.
 /config/secrets.yml
+
+/app/uploaders/*
