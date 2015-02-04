@@ -1,23 +1,33 @@
-<% provide(:title,"Sign Up") %>
+<% provide(:title,"Registro de Aluno") %>
 <div><!-- below each tag it the HTML generated. -->
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', object: f.object %> <!-- renders error messages if they need to be displayed. 'class:form-control' makes sure they are displayed on specific problematic input fields. -->
-    <%= f.label :name %>
+    <%= f.label :name, "Nome Completo do Aluno:" %>
     <%= f.text_field :name, class: 'form-control' %>
     <!-- <label for="user_name">Name</label>
     <input id="user_name" name="user[name]" type="text" /> -->
-    <%= f.label :email %>
+    <%= f.label :rg, "RG do Aluno:" %>
+    <%= f.text_field :rg, class: 'form-control' %>
+
+    <%= f.label :parent, "Nome Completo do Responsável:" %>
+    <%= f.text_field :parent, class: 'form-control' %>
+
+    <%= f.label :rg_parent, "RG do Responsável:" %>
+    <%= f.text_field :rg_parent, class: 'form-control' %>
+
+    <%= f.
+    <%= f.label :email, "E-mail do responsável:" %>
     <%= f.email_field :email, class: 'form-control' %>
     <!-- <label for="user_email">Email</label>
     <input id="user_email" name="user[email]" type="email" /> -->
-    <%= f.label :password %>
+    <!--<%= f.label :password %>
     <%= f.password_field :password, class: 'form-control' %>
     <!-- <label for="user_password">Password</label>
     <input id="user_password" name="user[password]" type="password" /> -->
-    <%= f.label :password_confirmation, "Confirmation" %>
+    <!--<%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
     <!-- [same as above, but matching] -->
-    <%= f.submit "Create my account" %>
+    <%= f.submit "Registrar" %>
     <!-- <form action="/users" class="new_user" id="new_user" method="post">: these create an HTTP POST request in the URL with the params in the form.
     <input name="utf8" type="hidden" value="&#x2713;" />:these two last lines are used internally by Rails to prevent CSRF by using an authenticity token.
     <input name="authenticity_token" type="hidden"
