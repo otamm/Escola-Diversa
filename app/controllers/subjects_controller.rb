@@ -1,4 +1,9 @@
 class SubjectsController < ApplicationController
+  before_action: :principal?, except: [:index,:show]
+
+  def index
+
+  end
 
   def new
 
@@ -8,6 +13,10 @@ class SubjectsController < ApplicationController
 
   end
 
+  def show
+
+  end
+  
   def edit
 
   end
@@ -19,5 +28,5 @@ class SubjectsController < ApplicationController
   def destroy
 
   end
-  
+
 end
