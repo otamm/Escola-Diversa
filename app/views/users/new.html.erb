@@ -1,13 +1,21 @@
 <% provide(:title,"Registro de Aluno") %>
+<script></script>
+<script src='new_student.js'></script>
 <div><!-- below each tag it the HTML generated. -->
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', object: f.object %> <!-- renders error messages if they need to be displayed. 'class:form-control' makes sure they are displayed on specific problematic input fields. -->
-    <%= f.label :name, "Nome Completo do Aluno:" %>
+    <%= f.label :name, "Nome Completo do(a) Aluno(a):" %>
     <%= f.text_field :name, class: 'form-control' %>
     <!-- <label for="user_name">Name</label>
     <input id="user_name" name="user[name]" type="text" /> -->
-    <%= f.label :rg, "RG do Aluno:" %>
+    <%= f.label :rg, "RG do(a) Aluno(a):" %>
     <%= f.text_field :rg, class: 'form-control' %>
+
+    <div>
+      Sexo:
+      <%= radio_button_tag(:gender, "Masculino"), class: 'radio inline' %>
+      <%= radio_button_tag(:gender, "Feminino"), class: 'radio inline' %>
+    </div>
 
     <%= f.label :parent, "Nome Completo do Responsável:" %>
     <%= f.text_field :parent, class: 'form-control' %>
@@ -15,9 +23,17 @@
     <%= f.label :rg_parent, "RG do Responsável:" %>
     <%= f.text_field :rg_parent, class: 'form-control' %>
 
-    <%= f.
-    <%= f.label :email, "E-mail do responsável:" %>
+    <%= f.label :phone, "Telefone do(a) Responsável:" %>
+    <%= f.text-field :phone, class: 'form-control' %>
+
+    <%= f.label :email, "E-mail do(a) responsável:" %>
     <%= f.email_field :email, class: 'form-control' %>
+    <div>
+      Parentesco do(a) responsável com o(a) Aluno(a):
+      <%= radio_button_tag(:parent, "Mãe"), class: 'radio inline' %>
+      <%= radio_button_tag(:parent, "Pai"), class: 'radio inline' %>
+      <%= radio_button_tag(:parent, "Outro"), class: 'radio inline', id: 'others' %>
+    </div>
     <!-- <label for="user_email">Email</label>
     <input id="user_email" name="user[email]" type="email" /> -->
     <!--<%= f.label :password %>
