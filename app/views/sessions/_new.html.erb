@@ -6,8 +6,8 @@
     <%= form_for(:session, url: login_path) do |f| %> <!-- it's not something like "form_for(@user)" because the @user instance variable as an argument to "form_for" method is made (more below) -->
                                                       <!-- viable through ActiveRecord, and our Sessions controller doesn't use AR as it doesn't save anything to the database.-->
       <div>
-        <%= f.label :login %>
-        <%= f.text_field :login, class: 'form_control' %>
+        <%= f.label :username_log %>
+        <%= f.text_field :username_log, class: 'form_control' %>
       </div>
       <div>
         <%= f.label :password %>

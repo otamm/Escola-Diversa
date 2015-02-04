@@ -1,6 +1,5 @@
 <% provide(:title,"Registro de Aluno") %>
-<script></script>
-<script src='new_student.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <div><!-- below each tag it the HTML generated. -->
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', object: f.object %> <!-- renders error messages if they need to be displayed. 'class:form-control' makes sure they are displayed on specific problematic input fields. -->
@@ -32,7 +31,16 @@
       Parentesco do(a) responsável com o(a) Aluno(a):
       <%= radio_button_tag(:parent, "Mãe"), class: 'radio inline' %>
       <%= radio_button_tag(:parent, "Pai"), class: 'radio inline' %>
-      <%= radio_button_tag(:parent, "Outro"), class: 'radio inline', id: 'others' %>
+        <div class="radio inline">
+          <label class="radio-inline control-label">
+            <input type="radio" id="amount_other" name="amount" value="Other: $">
+            Outro:
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input placeholder="Especificar..." type="text" class="form-control" id="amount_actual" name="amount_actual" maxlength="15" data-rule-required="true" contenteditable="false">
+      </div>
     </div>
     <!-- <label for="user_email">Email</label>
     <input id="user_email" name="user[email]" type="email" /> -->
