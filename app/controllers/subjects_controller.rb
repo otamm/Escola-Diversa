@@ -2,7 +2,7 @@ class SubjectsController < ApplicationController
   before_action: :principal?, except: [:index,:show]
 
   def index
-
+    @subjects = Subject.all
   end
 
   def new
@@ -16,7 +16,7 @@ class SubjectsController < ApplicationController
   def show
 
   end
-  
+
   def edit
 
   end

@@ -1,4 +1,4 @@
-class YearController < ApplicationController
+class YearsController < ApplicationController
   before_action :principal? #only the principal determines each grade's annual curriculum.
 
   def new

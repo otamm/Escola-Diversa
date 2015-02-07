@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'signup'            , to: 'users#new', as: :signup #only '_path' methods automatically created are these generated through 'resources'
 
-  get 'login'               => 'sessions#new'    #instead of adding something like 'resources :sessions', well only add the specific HTTP methods
+  get 'login'               => 'sessions#new'    #instead of adding something like 'resources :sessions', we'll only add the specific HTTP methods
                                                  #needed to manage user's sessions.
   post 'login'              => 'sessions#create' #get 'login' : page for new sessions; post 'login' : send form info to server (successful login or not) ; delete 'logout' : destroys session, once website is accessed again, login form will need to be filled in order to access user's area.
 

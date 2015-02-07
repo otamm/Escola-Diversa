@@ -8,5 +8,9 @@
 
 # to reset the db and add new changes specified here, use 'bundle exec rake db:migrate:reset'
 # use 'rake db:seed:<environment>' to populate a specific db, like 'rake db:seed:test'
-Staff.create!(name: "Dr Crabblesnitch", username_log: "crab.sni",email: "cr@sn.net" password: "h4ck3d", password_confirmation: "h4ck3d",activated: true, activated_at: Time.zone.now)
-User.find(1).update_attributes(role: 3)
+User.create!(name: "Dr Crabblesnitch", username_log: "crab.sni",email: "cr@sn.net", password: "h4ck3d", password_confirmation: "h4ck3d")
+User.find(1).update_attribute(:role, 3)
+User.create!(name: "Ms Phillips", username_log: "phi.lips",email: "msp@gmail.ztx", password: "h4ck3d", password_confirmation: "h4ck3d")
+User.find(2).update_attribute(:role, 2)
+User.create!(name: "Jimmy Hopkins", username_log: "j.hopks",email: "mrs_hopkins@madison.net", password: "h4ck3d", password_confirmation: "h4ck3d")
+User.find(3).update_attribute(:role, 1)
