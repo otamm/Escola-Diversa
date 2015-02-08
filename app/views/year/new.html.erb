@@ -1,0 +1,10 @@
+<%= form_for(@year) do |f| %><!-- html:{multipart: true} is necessary to file uploads.-->
+  <%= render 'shared/error_messages', object: f.object %>
+  <div  class="field">
+    <%= f.text_area :name, placeholder: "Nome (ex: 5o ano, 1a Série)" %>
+  </div>
+  <div  class="field">
+    <%= f.text_area :period, placeholder: "Período (ex: Ensino Médio, Ginásio)" %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
