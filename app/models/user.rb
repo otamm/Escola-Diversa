@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  belongs_to :year # a student will attend a specific year.
-  has_many :grades #a student will have many grades.
+  has_many :years # a student will attend a specific year, a teacher can teach more than one academic year.
+  has_many :subjects, through: :years # each year will have a set of subjects.
+  has_many :grades, through: :subjects #a student will have many grades, one for each subject.
   #has_many :subjects # and study the subjects of that year. : unnecessary, year already owns subjects.
   attr_accessible :name, :email, :password, :password_confirmation, :activated, :activated_at
   attr_accessor :remember_token,  :activation_token, :reset_token

@@ -11,12 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208193938) do
+ActiveRecord::Schema.define(version: 20150208205006) do
 
   create_table "grades", force: :cascade do |t|
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.decimal  "points",     precision: 3, scale: 1
+    t.integer  "subject_id"
+    t.integer  "user_id"
   end
 
   create_table "microposts", force: :cascade do |t|
