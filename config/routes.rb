@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
   resources :users, except: :new # each URL for the UsersController is created, except the one for the 'new' method.
 
-  get 'signup'            , to: 'users#new', as: :signup #only '_path' methods automatically created are these generated through 'resources'
+  get 'registro_aluno'            , to: 'users#new', as: :registro_aluno #only '_path' methods automatically created are these generated through 'resources'
+
+  get 'registro_professor'        , to: 'users#new', as: :registro_professor
 
   get 'login'               => 'sessions#new'    #instead of adding something like 'resources :sessions', we'll only add the specific HTTP methods
                                                  #needed to manage user's sessions.
@@ -27,6 +29,10 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
 
   resources :microposts, only: [:create, :destroy] # the interface to the Microposts model will run mainly through Home and Profile pages and the User model, so actions like 'new' and 'edit' are not mandatory.
+
+  resources :years
+
+  resources :subjects
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
