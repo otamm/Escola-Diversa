@@ -1,0 +1,7 @@
+<%= form_for(@subject) do |f| %><!-- html:{multipart: true} is necessary to file uploads.-->
+  <%= render 'shared/error_messages', object: f.object %>
+  <div  class="field">
+    <%= f.text_area :nome, placeholder: "Nome (ex: Matemática. Biologia)" %>
+  </div>
+  <%= f.submit "Salvar", class: "btn btn-primary" %>
+<% end %>
