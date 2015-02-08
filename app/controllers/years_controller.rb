@@ -6,7 +6,10 @@ class YearsController < ApplicationController
   end
 
   def create
-    
+    @year = Year.new(year_params)
+    if @year.save
+      flash[:notice] = "Ano registrado com sucesso!"
+    end
   end
 
   def edit

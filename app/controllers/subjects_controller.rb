@@ -6,11 +6,14 @@ class SubjectsController < ApplicationController
   end
 
   def new
-
+    @subject = Subject.new
   end
 
   def create
-
+    @subject = Subject.new(subject_params)
+    if @subject.save
+      flash[:notice] = "Matéria registrada com sucesso!"
+    end
   end
 
   def show
