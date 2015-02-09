@@ -42,7 +42,7 @@ class UsersController < ApplicationController
       # commented out since the account now needs to be activated. redirect_to @user #equivalent to 'redirect_to(user_url(@user))', rails infer the 'user_url()' method
       #redirect_to root_url
     else
-      render 'new' #renders the form page (the view [new], not the route [signup]) again (with errors output) if the user wasn't valid.
+      redirect_to root_url #renders the form page (the view [new], not the route [signup]) again (with errors output) if the user wasn't valid.
     end
 
   end
