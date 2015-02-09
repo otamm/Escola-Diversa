@@ -5,11 +5,16 @@ class UsersController < ApplicationController
   before_action :admin_user, only: [:destroy] # if the current user is not an admin, the 'destroy' method won't be executed.
 
   def index
-    @users = User.where(paginate(page: params[:page]) # available from will_paginate on Gemfile
+    @users = User.where(paginate(page: params[:page])) # available from will_paginate on Gemfile
   end
 
   def new
     @user = User.new
+    if request.env['PATH_INFO'] == "/registro_aluno"
+      render :new_student
+    elsif request.env['PATH_INFO'] == "/registro_professor"
+      render :new_staff
+    end
   end
 
   def show

@@ -12,17 +12,17 @@
 
     <div>
       Sexo:
-      <%= radio_button_tag(:gender, "Masculino"), class: 'radio inline' %>
-      <%= radio_button_tag(:gender, "Feminino"), class: 'radio inline' %>
+      <%= radio_button_tag 'gender', 'Masculino', class: 'radio inline' %>
+      <%= radio_button_tag 'gender', 'Feminino', class: 'radio inline' %>
     </div>
 
 
     <%= f.label :phone, "Telefone do(a) Professor(a):" %>
-    <%= f.text-field :phone, class: 'form-control' %>
+    <%= f.text_field :phone, class: 'form-control' %>
 
     <%= f.label :email, "E-mail do(a) Professor(a):" %>
     <%= f.email_field :email, class: 'form-control' %>
-  
+
     <!-- <label for="user_email">Email</label>
     <input id="user_email" name="user[email]" type="email" /> -->
     <!--<%= f.label :password %>
