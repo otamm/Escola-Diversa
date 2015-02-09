@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150209021652) do
     t.string   "phone"
     t.boolean  "gender"
     t.string   "parent_name"
+    t.string   "parent"
   end
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true

@@ -18,8 +18,8 @@
       <%= f.label :gender, "Feminino" %>
     </div>
 
-    <%= f.label :parent, "Nome Completo do Responsável:" %>
-    <%= f.text_field :parent, class: 'form-control' %>
+    <%= f.label :parent_name, "Nome Completo do Responsável:" %>
+    <%= f.text_field :parent_name, class: 'form-control' %>
 
     <%= f.label :rg_parent, "RG do Responsável:" %>
     <%= f.text_field :rg_parent, class: 'form-control' %>
@@ -33,9 +33,9 @@
     <div>
       Parentesco do(a) responsável com o(a) Aluno(a):
       <%= f.label :parent, "Mãe" %>
-      <%= radio_button_tag :parent_name, "Mãe", class: 'radio inline' %>
+      <%= radio_button_tag :parent, "Mãe", class: 'radio inline' %>
       <%= f.label :parent, "Pai" %>
-      <%= radio_button_tag :parent_name, "Pai", class: 'radio inline' %>
+      <%= radio_button_tag :parent, "Pai", class: 'radio inline' %>
         <div class="radio inline">
           <label class="radio-inline control-label">
             Outro:
