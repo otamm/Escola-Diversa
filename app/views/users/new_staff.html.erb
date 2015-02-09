@@ -12,8 +12,10 @@
 
     <div>
       Sexo:
-      <%= radio_button_tag 'gender', 'Masculino', class: 'radio inline' %>
-      <%= radio_button_tag 'gender', 'Feminino', class: 'radio inline' %>
+      <%= f.radio_button :gender, false, class: 'radio inline' %>
+      <%= f.label :gender, "Masculino" %>
+      <%= radio_button :gender, true, class: 'radio inline' %>
+      <%= f.label :gender, "Feminino" %>
     </div>
 
 
