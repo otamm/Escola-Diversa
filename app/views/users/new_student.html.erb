@@ -33,9 +33,9 @@
     <div>
       Parentesco do(a) responsável com o(a) Aluno(a):
       <%= f.label :parent, "Mãe" %>
-      <%= radio_button_tag :parent, "Mãe", class: 'radio inline' %>
+      <%= radio_button_tag :parent_name, "Mãe", class: 'radio inline' %>
       <%= f.label :parent, "Pai" %>
-      <%= radio_button_tag :parent, "Pai", class: 'radio inline' %>
+      <%= radio_button_tag :parent_name, "Pai", class: 'radio inline' %>
         <div class="radio inline">
           <label class="radio-inline control-label">
             Outro:
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="form-group">
-        <input placeholder="Especificar..." type="text" class="form-control" id="amount_actual" name="amount_actual" maxlength="15" data-rule-required="true" contenteditable="false">
+        <input placeholder="Especificar..." type="text" class="form-control" name="parent" maxlength="15"><!-- data-rule-required="true" contenteditable="false">-->
       </div>
     </div>
     <!-- <label for="user_email">Email</label>
