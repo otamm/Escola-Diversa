@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150209015524) do
+ActiveRecord::Schema.define(version: 20150208205006) do
 
   create_table "grades", force: :cascade do |t|
     t.datetime "created_at",                         null: false
@@ -47,9 +47,6 @@ ActiveRecord::Schema.define(version: 20150209015524) do
     t.integer  "role",            default: 0
     t.string   "email"
     t.string   "username_log"
-    t.string   "rg"
-    t.string   "rg_parent"
-    t.string   "phone"
   end
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true
