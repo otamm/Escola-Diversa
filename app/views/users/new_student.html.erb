@@ -12,8 +12,10 @@
 
     <div>
       Sexo:
-      <%= radio_button_tag(:gender, "Masculino"), class: 'radio inline' %>
-      <%= radio_button_tag(:gender, "Feminino"), class: 'radio inline' %>
+      <%= f.radio_button :gender, false, class: 'radio inline' %>
+      <%= f.label :gender, "Masculino" %>
+      <%= radio_button :gender, true, class: 'radio inline' %>
+      <%= f.label :gender, "Feminino" %>
     </div>
 
     <%= f.label :parent, "Nome Completo do Responsável:" %>
@@ -21,19 +23,21 @@
 
     <%= f.label :rg_parent, "RG do Responsável:" %>
     <%= f.text_field :rg_parent, class: 'form-control' %>
-
+    </br>
     <%= f.label :phone, "Telefone do(a) Responsável:" %>
-    <%= f.text-field :phone, class: 'form-control' %>
+    <%= f.text_field :phone, class: 'form-control' %>
 
+    </br>
     <%= f.label :email, "E-mail do(a) responsável:" %>
     <%= f.email_field :email, class: 'form-control' %>
     <div>
       Parentesco do(a) responsável com o(a) Aluno(a):
-      <%= radio_button_tag(:parent, "Mãe"), class: 'radio inline' %>
-      <%= radio_button_tag(:parent, "Pai"), class: 'radio inline' %>
+      <%= f.label :parent, "Mãe" %>
+      <%= radio_button_tag :parent, "Mãe", class: 'radio inline' %>
+      <%= f.label :parent, "Pai" %>
+      <%= radio_button_tag :parent, "Pai", class: 'radio inline' %>
         <div class="radio inline">
           <label class="radio-inline control-label">
-            <input type="radio" id="amount_other" name="amount" value="Other: $">
             Outro:
           </label>
         </div>
