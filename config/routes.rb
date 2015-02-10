@@ -16,7 +16,16 @@ Rails.application.routes.draw do
 
   get 'about'               => 'static_pages#about'
 
-  resources :users, except: :new # each URL for the UsersController is created, except the one for the 'new' method.
+  resources :users, except: :new do # each URL for the UsersController is created, except the one for the 'new' method.
+    resources :years do
+      resources :subjects, except: :show # attribute subjects to years.
+      resources :users, except: [:new,:create] do # attributte grades to students.
+        resources :subjects, only: :show do
+          resources :grades
+        end
+      end
+    end
+  end
 
   get 'registro_aluno'            , to: 'users#new', as: :registro_aluno #only '_path' methods automatically created are these generated through 'resources'
 
