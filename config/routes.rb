@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'about'               => 'static_pages#about'
 
   resources :users, except: :new do # each URL for the UsersController is created, except the one for the 'new' method.
+    resources :microposts #enable micropost posting, showing and etc only inside the user area.
     resources :years do
       resources :subjects, except: :show # attribute subjects to years.
       resources :users, except: [:new,:create] do # attributte grades to students.
