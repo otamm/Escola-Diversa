@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action: :principal?, except: [:index,:show]
+  before_action :principal?, except: [:index,:show]
 
   def index
     @subjects = Subject.all

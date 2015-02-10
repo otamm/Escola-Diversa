@@ -53,28 +53,7 @@
       </div><!--slider-nav-->
     </div><!--col-md-6-->
     <div class="col-md-4 col-sm-height">
-      <div class="col-md-6 col-md-offset-3">
-        <%= form_for(:session, url: login_path) do |f| %> <!-- it's not something like "form_for(@user)" because the @user instance variable as an argument to "form_for" method is made (more below) -->
-        <!-- viable through ActiveRecord, and our Sessions controller doesn't use AR as it doesn't save anything to the database.-->
-        <div>
-          <%= f.label :username_log %>
-          <%= f.text_field :username_log, class: 'form_control' %>
-        </div>
-        <div>
-          <%= f.label :password %>
-          <%= link_to "(Esqueceu a senha?)", new_password_reset_path %>
-          <%= f.password_field :password, class: 'form_control' %>
-        </div>
-        <div>
-          <%= f.label :remember_me, class: 'checkbox inline' do %>
-          <%= f.check_box :remember_me %>
-          <span> Lembrar neste computador. </span>
-          <% end %>
-        </div>
-        <div>
-          <%= f.submit "Entrar" %>
-        </div>
-        <% end %>
+      <%= render partial: 'sessions/new' %>
     </div><!--col-md-4-->
   </div><!--row-->
 </div><!--container-->

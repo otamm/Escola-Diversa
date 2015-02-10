@@ -3,8 +3,12 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
+  get 'login'               => 'sessions#new'    #instead of adding something like 'resources :sessions', we'll only add the specific HTTP methods
+  #needed to manage user's sessions.
+  post 'login'              => 'sessions#create' #get 'login' : page for new sessions; post 'login' : send form info to server (successful login or not) ; delete 'logout' : destroys session, once website is accessed again, login form will need to be filled in order to access user's area.
+
   # syntax for route naming: <HTTP method> '<name that will correspond to the page on URL>' => '<method of a pre-defined controller>'
-  get 'sessions/new'
+  #get 'sessions/new'
 
   root 'static_pages#home' #changes 'URL code' to 'Ruby code', "class_name#method" is the syntax for returning the home controller method for 'static_pages' controller.
 
@@ -17,10 +21,6 @@ Rails.application.routes.draw do
   get 'registro_aluno'            , to: 'users#new', as: :registro_aluno #only '_path' methods automatically created are these generated through 'resources'
 
   get 'registro_professor'        , to: 'users#new', as: :registro_professor
-
-  get 'login'               => 'sessions#new'    #instead of adding something like 'resources :sessions', we'll only add the specific HTTP methods
-                                                 #needed to manage user's sessions.
-  post 'login'              => 'sessions#create' #get 'login' : page for new sessions; post 'login' : send form info to server (successful login or not) ; delete 'logout' : destroys session, once website is accessed again, login form will need to be filled in order to access user's area.
 
   delete 'logout'           => 'sessions#delete' # the method 'delete' is different than 'destroy.' More info on SessionsController.
 

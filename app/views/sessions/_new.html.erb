@@ -1,7 +1,5 @@
-<% provide(:title, "Log In") %>
-<h1>Log In</h1>
+<h1>Login</h1>
 
-<div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %> <!-- it's not something like "form_for(@user)" because the @user instance variable as an argument to "form_for" method is made (more below) -->
                                                       <!-- viable through ActiveRecord, and our Sessions controller doesn't use AR as it doesn't save anything to the database.-->
